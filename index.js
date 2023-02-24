@@ -224,15 +224,12 @@ const findBestMove = depth => {
 
   return bestMove;
 };
-// 5.321
+
 const makeBestMove = () => {
-  const start = new Date();
   const move = findBestMove(3);
 
   game.ugly_move(move);
   board.position(game.fen());
-  
-  console.log((new Date() - start) / 1000);
 };
 
 const onDragStart = (_, piece) => {
